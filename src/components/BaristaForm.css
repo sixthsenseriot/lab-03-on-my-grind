@@ -1,0 +1,16 @@
+.container,
+.mini-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container {
+    align-items: flex-start;
+    margin: auto;
+    position: relative;
+}
+
+.mini-container {
+    flex-direction: column;
+    margin: 50px;
+}
