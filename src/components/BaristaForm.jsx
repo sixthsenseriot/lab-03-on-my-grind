@@ -90,7 +90,6 @@ const BaristaForm = () => {
         blended: ["yes", "turbo", "no"],
     };
 
-    // For capitalizing drinks
     function capitalizeWord(word) {
         if (typeof word !== "string" || word.length === 0) return "";
         return word
@@ -112,14 +111,14 @@ const BaristaForm = () => {
                     className="button newdrink"
                     onClick={onNewDrink}
                 >
-                    🔄
+                    <i class="fa-solid fa-arrows-rotate"></i>
                 </button>
             </div>
             <form className="container">
                 <div className="mini-container">
                     <h3>Temperature</h3>
                     <div className="answer-space" id={correct_temp}>
-                        {inputs["temperature"]}
+                        {capitalizeWord(inputs["temperature"])}
                     </div>
                     <RecipeChoices
                         handleChange={(e) =>
@@ -137,7 +136,7 @@ const BaristaForm = () => {
                 <div className="mini-container">
                     <h3>Milk</h3>
                     <div className="answer-space" id={correct_milk}>
-                        {inputs["milk"]}
+                        {capitalizeWord(inputs["milk"])}
                     </div>
                     <RecipeChoices
                         handleChange={(e) =>
@@ -155,7 +154,7 @@ const BaristaForm = () => {
                 <div className="mini-container">
                     <h3>Syrup</h3>
                     <div className="answer-space" id={correct_syrup}>
-                        {inputs["syrup"]}
+                        {capitalizeWord(inputs["syrup"])}
                     </div>
                     <RecipeChoices
                         handleChange={(e) =>
@@ -173,7 +172,7 @@ const BaristaForm = () => {
                 <div className="mini-container">
                     <h3>Blended</h3>
                     <div className="answer-space" id={correct_blended}>
-                        {inputs["blended"]}
+                        {capitalizeWord(inputs["blended"])}
                     </div>
                     <RecipeChoices
                         handleChange={(e) =>
@@ -197,13 +196,6 @@ const BaristaForm = () => {
                 onClick={onCheckAnswer}
             >
                 Check Answer
-            </button>
-            <button
-                type="new-drink-button"
-                className="button submit"
-                onClick={onNewDrink}
-            >
-                New Drink
             </button>
         </div>
     );
