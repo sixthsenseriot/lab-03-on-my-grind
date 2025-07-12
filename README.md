@@ -1,6 +1,6 @@
-# ☕ Barista Brain – CodePath WEB102 Lab 2
+# ☕ On My Grind – CodePath WEB102 Lab 2
 
-**Barista Brain** is a memory-based quiz app inspired by Wordle — but for aspiring baristas! In this web application, users test their knowledge of real (and even discontinued 😉) Starbucks drinks by selecting the correct combination of temperature, syrup, milk, and blendedness. After making their selections, they can check their answers to see which elements are correct and continue generating more drinks to challenge themselves. Built as part of **CodePath's WEB102 Lab 2**.
+**On My Grind** is a memory-based quiz app inspired by Wordle — but for aspiring baristas! In this web application, users test their knowledge of real (and even discontinued 😉) Starbucks drinks by selecting the correct combination of temperature, syrup, milk, and blendedness. After making their selections, they can check their answers to see which elements are correct and continue generating more drinks to challenge themselves. Built as part of **CodePath's WEB102 Lab 2**.
 
 ## 🎯 Lab Objective
 This lab focuses on:
