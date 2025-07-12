@@ -50,7 +50,12 @@ const BaristaForm = () => {
         let randomDrinkIndex = Math.floor(
             Math.random() * drinksJson.drinks.length
         );
-        setCurrentDrink(drinksJson.drinks[randomDrinkIndex].name);
+
+        const capitalizedDrink = capitalizeWord(
+            drinksJson.drinks[randomDrinkIndex].name
+        );
+
+        setCurrentDrink(capitalizedDrink);
         setTrueRecipe(drinksJson.drinks[randomDrinkIndex].ingredients);
     };
 
@@ -84,6 +89,18 @@ const BaristaForm = () => {
         milk: ["cow", "oat", "goat", "almond", "none"],
         blended: ["yes", "turbo", "no"],
     };
+
+    // For capitalizing drinks
+    function capitalizeWord(word) {
+        if (typeof word !== "string" || word.length === 0) return "";
+        return word
+            .split(" ")
+            .map(
+                (part) =>
+                    part.charAt(0).toUpperCase() + part.slice(1).toLowerCase()
+            )
+            .join(" ");
+    }
 
     return (
         <div className="BaristaForm">
