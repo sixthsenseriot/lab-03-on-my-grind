@@ -134,24 +134,6 @@ const BaristaForm = () => {
                 </div>
 
                 <div className="mini-container">
-                    <h3>Milk</h3>
-                    <div className="answer-space" id={correct_milk}>
-                        {capitalizeWord(inputs["milk"])}
-                    </div>
-                    <RecipeChoices
-                        handleChange={(e) =>
-                            setInputs((prevState) => ({
-                                ...prevState,
-                                [e.target.name]: e.target.value,
-                            }))
-                        }
-                        label="milk"
-                        choices={ingredients["milk"]}
-                        checked={inputs["milk"]}
-                    />
-                </div>
-
-                <div className="mini-container">
                     <h3>Syrup</h3>
                     <div className="answer-space" id={correct_syrup}>
                         {capitalizeWord(inputs["syrup"])}
@@ -166,6 +148,24 @@ const BaristaForm = () => {
                         label="syrup"
                         choices={ingredients["syrup"]}
                         checked={inputs["syrup"]}
+                    />
+                </div>
+
+                <div className="mini-container">
+                    <h3>Milk</h3>
+                    <div className="answer-space" id={correct_milk}>
+                        {capitalizeWord(inputs["milk"])}
+                    </div>
+                    <RecipeChoices
+                        handleChange={(e) =>
+                            setInputs((prevState) => ({
+                                ...prevState,
+                                [e.target.name]: e.target.value,
+                            }))
+                        }
+                        label="milk"
+                        choices={ingredients["milk"]}
+                        checked={inputs["milk"]}
                     />
                 </div>
 
